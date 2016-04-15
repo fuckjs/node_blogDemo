@@ -1,23 +1,35 @@
 <div class="col-md-3 col-md-offset-1">
 	<% if (title=="注册页") {%>
-	<ul class="nav nav-pills nav-stacked">
-	  <li role="presentation" class="active"><a href="\/reg" data-toggle="pill">注册</a></li>
-	  <li role="presentation"><a href="\/login" data-toggle="pill">登陆</a></li>
-	  <li role="presentation"><a href="\/" data-toggle="pill">主页</a></li>
+	<ul class="nav nav-pills nav-stacked" id="myTabs">
+	  <li role="presentation" class="active"><a href="http://localhost:3000/reg">注册</a></li>
+	  <li role="presentation"><a href="http://localhost:3000/login">登陆</a></li>
+	  <li role="presentation"><a href="http://localhost:3000">主页</a></li>
 	</ul>
 	<% } %>
 	<% if (title=="登陆页") {%>
-	<ul class="nav nav-pills nav-stacked">
-	  <li role="presentation"><a href="\/reg" data-toggle="pill">注册</a></li>
-	  <li role="presentation" class="active"><a href="\/login" data-toggle="pill">登陆</a></li>
-	  <li role="presentation"><a href="\/" data-toggle="pill">主页</a></li>
+	<ul class="nav nav-pills nav-stacked" id="myTabs">
+	  <li role="presentation"><a href="http://localhost:3000/reg">注册</a></li>
+	  <li role="presentation" class="active"><a href="http://localhost:3000/login">登陆</a></li>
+	  <li role="presentation"><a href="http://localhost:3000">主页</a></li>
 	</ul>
 	<% } %>
 	<% if (title=="主页") {%>
-	<ul class="nav nav-pills nav-stacked">
-	  <li role="presentation"><a href="\/reg" data-toggle="pill">注册</a></li>
-	  <li role="presentation"><a href="\/login" data-toggle="pill">登陆</a></li>
-	  <li role="presentation" class="active"><a href="\/" data-toggle="pill">主页</a></li>
+	<ul class="nav nav-pills nav-stacked" id="myTabs">
+	  <li role="presentation"><a href="http://localhost:3000/reg">注册</a></li>
+	  <li role="presentation"><a href="http://localhost:3000/login">登陆</a></li>
+	  <li role="presentation" class="active"><a href="http://localhost:3000">主页</a></li>
 	</ul>
 	<% } %>
+	<% if (title=="登陆异常") {%>
+	<ul class="nav nav-pills nav-stacked" id="myTabs">
+	  <li role="presentation"><a href="http://localhost:3000/reg">注册</a></li>
+	  <li role="presentation"><a href="http://localhost:3000/login">登陆</a></li>
+	  <li role="presentation" class="active"><a href="http://localhost:3000/error">失败</a></li>
+	</ul>
+	<% } %>
+	<script>
+	$("myTabs a").click(function() {
+		$(this).tab('show');
+	});
+	</script>
 </div>

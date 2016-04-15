@@ -43,10 +43,6 @@ User.prototype.save = function(){
 var mongoose = require('mongoose');
 var UserSchema = require('../schemas/UserSchema');
 
-//mongoose.connect('mongodb://localhost/blog');
-
 var UserModel = mongoose.model('user',UserSchema);
 
 module.exports = UserModel;
-
-//var db = mongoose.connect
