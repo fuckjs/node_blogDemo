@@ -1,44 +1,52 @@
-var mongoose = require('mongoose');
+/*var mongoose = require('mongoose');
+
+
+
+
 
 function User(user){
-	this.name = user.name;
+	this.username = user.username;
 	this.password = user.password;
 	this.email = user.email;
 }
-
 User.prototype.save = function(){
-	var user = {
-      name: this.name,
-      password: this.password,
-      email: this.email
-  	};
-
-  	mongoose.connect('mongodb://localhost/blog');
+    var user = {
+        username: this.username,
+        password: this.password,
+        email: this.email
+      };
+    var userSchema = mongoose.Schema({
+      username : {
+        type: String,
+        unique: true
+      },
+      password : String,
+      email : String
+    });
   	var db = mongoose.connection;
   	db.on('error', function(event) {
+      console.log(event);
   		console.log('连接数据库失败');
+      return;
   	});
-  	db.once('open',function(){
-  		console.log('连接数据库成功');
-  		var userSchema = mongoose.Schema({
-  			name : String,
-  			pass : String,
-  			email : String
-  		});
-/*  		userSchema.methods.speak = function(){
-  			var name = this.name;
-  			console.log('my name is '+name);
-  		}*/
-  		var User = mongoose.model('User',userSchema);
-  		var userInfo = new User(user);
-  		//userInfo.speak();
-  		userInfo.save(function(){
-  			User.find({name:'haiyang'},function(err,data){
-  				console.log(data);
-  			})
-  		});
 
-  	})
-}
+		console.log('连接数据库成功');
+		
+		var User = mongoose.model('User',userSchema);
+		var userInfo = new User(user);
+		//userInfo.speak();
+		userInfo.save(function(){
+		});
 
-module.exports = User;
+}*/
+
+var mongoose = require('mongoose');
+var UserSchema = require('../schemas/UserSchema');
+
+//mongoose.connect('mongodb://localhost/blog');
+
+var UserModel = mongoose.model('user',UserSchema);
+
+module.exports = UserModel;
+
+//var db = mongoose.connect
