@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="container">
+        <%- include header %>
+        <div class="row">
+            <%- include aside %>
+            <div class="col-md-8">
+              <ul class="list-group">
+                <%for(var i=0;i<articleList.length;i++){%>
+                <li class="list-group-item">
+                  <p class="h3"><a href="#"><%= articleList[i].title %></a></p>
+                  <p class="h5"><%= articleList[i].content %></p>
+                </li>
+                <%}%>
+                <!-- <li class="list-group-item">
+                  <p class="h3"><a href="#">习近平考察小岗村重温改革</a></p>
+                  <p class="h5">强调要坚持党的基本路线一百年不动摇，改革开放不停步</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h3"><a href="#">习近平网信工作全文发表</a></p>
+                  <p class="h5">坚决打击利用网络鼓吹推翻国家政权，宣扬民族分裂</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h3"><a href="#">习近平：谱写航天事业新篇章</a></p>
+                  <p class="h5">设立中国航天日，就是要铭记历史，传承精神</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h3"><a href="#">习近平谈如何做好群众工作</a></p>
+                  <p class="h5">强化责任担当，把群众合理合法地诉求解决好</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="h3"><a href="#">习近平要求发挥互联网新功能</a></p>
+                  <p class="h5">要利用好互联网这个新平台，干部必须学会使用互联网</p>
+                </li> -->
+              </ul>
+            </div>
+        </div>
+        <%- include footer %>
+  </div>
+    
+  </body>
+</html>

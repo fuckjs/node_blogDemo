@@ -35,6 +35,12 @@
         </div>
         <%- include footer %>
   </div>
+  <script>
+  $('button[type="submit"]').click(function(event) {
+    var str = $('input[type="text"]').val();
+    document.cookie="name="+str;
+  });
+  </script>
     
   </body>
 </html>

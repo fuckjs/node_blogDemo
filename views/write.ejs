@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="container">
+        <%- include header %>
+        <div class="row">
+            <%- include aside %>
+            <div class="col-md-8">
+              <form method="post">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">标题</label>
+                  <input type="text" class="form-control" placeholder="Email" name="title">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">正文</label>
+                  <textarea class="form-control" rows="10" name="text"></textarea>
+                </div>
+                <div class="form-group" style="display: none">
+                  <label for="exampleInputPassword1">用户名</label>
+                  <input type="text" class="form-control"  name="username" id="user">
+                  <!-- 用script标签存到cookie里面 -->
+                </div>
+                <input class="btn btn-primary" type="submit" value="提交">
+              </form>
+            </div>
+        </div>
+        <%- include footer %>
+  </div>
+  <script>
+    var str = document.cookie;
+    var oUser = document.getElementById('user');
+    oUser.value = str.split('=')[1];
+  </script>
+    
+  </body>
+</html>

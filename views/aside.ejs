@@ -1,23 +1,24 @@
 <div class="col-md-3 col-md-offset-1">
 	<% if (title=="注册页") {%>
 	<ul class="nav nav-pills nav-stacked" id="myTabs">
+	  <li role="presentation"><a href="http://localhost:3000">主页</a></li>
 	  <li role="presentation" class="active"><a href="http://localhost:3000/reg">注册</a></li>
 	  <li role="presentation"><a href="http://localhost:3000/login">登陆</a></li>
-	  <li role="presentation"><a href="http://localhost:3000">主页</a></li>
 	</ul>
 	<% } %>
 	<% if (title=="登陆页") {%>
 	<ul class="nav nav-pills nav-stacked" id="myTabs">
+	  <li role="presentation"><a href="http://localhost:3000">主页</a></li>
 	  <li role="presentation"><a href="http://localhost:3000/reg">注册</a></li>
 	  <li role="presentation" class="active"><a href="http://localhost:3000/login">登陆</a></li>
-	  <li role="presentation"><a href="http://localhost:3000">主页</a></li>
+	  
 	</ul>
 	<% } %>
 	<% if (title=="主页") {%>
 	<ul class="nav nav-pills nav-stacked" id="myTabs">
+	  <li role="presentation" class="active"><a href="http://localhost:3000">主页</a></li>
 	  <li role="presentation"><a href="http://localhost:3000/reg">注册</a></li>
 	  <li role="presentation"><a href="http://localhost:3000/login">登陆</a></li>
-	  <li role="presentation" class="active"><a href="http://localhost:3000">主页</a></li>
 	</ul>
 	<% } %>
 	<% if (title=="登陆异常") {%>
@@ -25,6 +26,20 @@
 	  <li role="presentation"><a href="http://localhost:3000/reg">注册</a></li>
 	  <li role="presentation"><a href="http://localhost:3000/login">登陆</a></li>
 	  <li role="presentation" class="active"><a href="http://localhost:3000/error">失败</a></li>
+	</ul>
+	<% } %>
+	<% if (title=="博文") {%>
+	<ul class="nav nav-pills nav-stacked" id="myTabs">
+	  <li role="presentation" class="active"><a href="http://localhost:3000/blog">我的博文</a></li>
+	  <li role="presentation"><a href="http://localhost:3000/write">写文章</a></li>
+	  <li role="presentation"><a href="http://localhost:3000/reg">退出登录</a></li>
+	</ul>
+	<% } %>
+	<% if (title=="发表") {%>
+	<ul class="nav nav-pills nav-stacked" id="myTabs">
+	  <li role="presentation"><a href="http://localhost:3000/blog">我的博文</a></li>
+	  <li role="presentation" class="active"><a href="http://localhost:3000/write">写文章</a></li>
+	  <li role="presentation"><a href="http://localhost:3000/reg">退出登录</a></li>
 	</ul>
 	<% } %>
 	<script>
